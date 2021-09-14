@@ -4,7 +4,7 @@
 gcloud compute ssh --zone=us-central1-c app-server-dev 
 cd nodeapp
 # get files from repo
-git 'git@github.com:Z11mm/jenkins-test-app.git'
+git clone 'git@github.com:Z11mm/jenkins-test-app.git'
 npm install --production
-pm2 start app.js
+npm start
 exit
