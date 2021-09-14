@@ -5,12 +5,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building the application...'
-                sh 'mocha'
+                sh 'npm install'
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing the application...'
+                sh 'mocha'
             }
         }
         stage('Deploy') {
