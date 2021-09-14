@@ -7,6 +7,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building the application...'
+                sh 'chmod +x deploy.sh'
                 sh './deploy.sh'
             }
         }
