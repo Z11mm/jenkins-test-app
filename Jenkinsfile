@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building the application...'
+                echo 'Building the application....'
                 sh '''
                 #!/bin/bash
                 rm -rf *.tar.gz
