@@ -25,7 +25,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying the application....'
+                echo 'Deploying the application...'
                 sh '''
                 cd /var/www/test
                 tar xzf node-build.tar.gz
