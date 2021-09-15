@@ -7,6 +7,11 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building the application...'
+                sh '''
+                rm -rf *.tar.gz
+                npm install
+                tar czf node-$BUILD_NUMBER.tar.gz node_modules app.js package.json public
+                '''
             }
         }
         stage('Test') {
