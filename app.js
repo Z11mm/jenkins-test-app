@@ -6,7 +6,7 @@ const PORT = 3000;
 
 
 app.get("/", function (req, res) {
-  res.send("Hello World, is this working...");
+  res.send("Hello World, this is working...");
 });
 
 app.listen(PORT);
