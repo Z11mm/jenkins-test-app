@@ -27,7 +27,13 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying the application...'
-                sh './deploy.sh'
+                sh '''
+                #!/bin/bash
+                cd /var/www/test
+                tar xzf node-build.tar.gz
+                npm install
+                npm start
+                '''
             }
         }
     }
