@@ -3,6 +3,10 @@ pipeline {
 
     tools {nodejs "node"}
 
+    environment {
+        CI = 'true'
+    }
+
     stages {
         stage('Build') {
             steps {
@@ -22,6 +26,13 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying the application...'
+                sh '''
+                mv ~/workspace/node-$BUILD_NUMBER.tar.gz /var/www/test/node-build.tar.gz
+                cd /var/www/test
+                tar xzf node-build.tar.gz
+                npm install
+                npm start
+                '''
             }
         }
     }
