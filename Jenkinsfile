@@ -7,7 +7,6 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building the application...'
-                sh 'npm install'
             }
         }
         stage('Test') {
@@ -18,10 +17,6 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying the application'
-                sh '''
-                chmod +x deploy.sh;
-                ./deploy.sh
-                '''
             }
         }
     }
