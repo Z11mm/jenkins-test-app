@@ -20,12 +20,12 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'Testing the application...'
+                echo 'Testing the application....'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying the application...'
+                echo 'Deploying the application....'
                 sh '''
                 cd /var/www/test
                 tar xzf node-build.tar.gz
