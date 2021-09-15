@@ -29,7 +29,7 @@ pipeline {
                 echo 'Deploying the application...'
                 sh '''
                 #!/bin/bash
-                cd /var/www/test
+                (cd /var/www/test)
                 tar xzf node-build.tar.gz
                 npm install
                 npm start
