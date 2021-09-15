@@ -27,7 +27,6 @@ pipeline {
             steps {
                 echo 'Deploying the application...'
                 sh '''
-                mv ~/workspace/node-$BUILD_NUMBER.tar.gz /var/www/test/node-build.tar.gz
                 cd /var/www/test
                 tar xzf node-build.tar.gz
                 npm install
