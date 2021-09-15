@@ -10,7 +10,7 @@ pipeline {
                 sh '''
                 rm -rf *.tar.gz
                 npm install
-                tar czf node-$BUILD_NUMBER.tar.gz node_modules app.js package.json public
+                tar czf node-$BUILD_NUMBER.tar.gz node_modules app.js package.json
                 '''
             }
         }
