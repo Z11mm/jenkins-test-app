@@ -7,7 +7,7 @@ const app = express();
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-app.get("/", function (req, res) {
+app.get("/home", function (req, res) {
   res.send("Hello World");
 });
 
