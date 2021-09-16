@@ -11,7 +11,7 @@ pipeline {
                 #!/bin/bash
                 rm -rf *.tar.gz
                 npm install
-                tar czf node-build.tar.gz node_modules app.js package.json
+                tar czf node-build.tar.gz node_modules app.js package.json pm2config.json
                 '''
             }
         }
