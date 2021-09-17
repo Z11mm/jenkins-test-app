@@ -1,6 +1,6 @@
 {
     "apps": [{
-        "name": "jenkins-test-app",
+        "name": "test",
         "script": "app.js",
         "watch": true,
         "env": {
